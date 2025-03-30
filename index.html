@@ -89,9 +89,19 @@
   </svg>
 
 
-  <audio autoplay loop>
+  <audio id="bgMusic" loop>
     <source src="/img/New West  Those Eyes Chapter 1.mp3" type="audio/mpeg">
   </audio>
+  
+  <script>
+    // Tocar música após interação do usuário (requerido por muitos navegadores)
+    document.body.addEventListener('click', function() {
+      document.getElementById('bgMusic').play();
+    });
+    
+    // Opção: Volume controlado (0.0 a 1.0)
+    document.getElementById('bgMusic').volume = 0.5;
+  </script>
 
 <!-- javascript file -->
   <script  src="script.js"></script>
